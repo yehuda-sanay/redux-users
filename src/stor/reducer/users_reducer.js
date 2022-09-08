@@ -20,6 +20,6 @@ export default function usersReducer({users},action){
             return [...newArray]
     
         default:
-            return users
+            return {users}
     }
 }
