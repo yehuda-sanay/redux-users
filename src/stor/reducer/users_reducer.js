@@ -1,4 +1,4 @@
-import{GET_USER_BY_ID,ADD_USER,UPDAT_USER,REMOV_USER} from '../types'
+import {GET_USER_BY_ID,ADD_USER,UPDAT_USER,REMOV_USER} from '../types/user_types'
 export default function usersReducer({users},action){
     switch (action.type) {
         case GET_USER_BY_ID:
@@ -6,7 +6,7 @@ export default function usersReducer({users},action){
             return [...users]
         case ADD_USER:
             
-            return [...users,action.payload]
+            return {users:[...users,action.payload]}
         case UPDAT_USER:
             let newArray = users.filter((userItem)=>{
                 userItem.id==action.payload.id

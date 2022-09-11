@@ -1,9 +1,9 @@
-function addAction(){
-    return{type:"ADD_USER",paylod:"user"}
+import {GET_USER_BY_ID,ADD_USER,UPDAT_USER,REMOV_USER} from '../types/user_types'
+function addAction(user){
+    return{type:ADD_USER,payload:user}
 }
 
-function updatAction(){
-    return{type:"ADD_USER",paylod:{id:"petah tikva",firstName:"Yehuda"}}
-}
+
+export {addAction,}
 
 
